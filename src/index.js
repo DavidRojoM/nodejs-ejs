@@ -12,7 +12,7 @@ app.set('views', path.join(__dirname, 'views'))
 // ROUTES
 app.use(require('./routes/index'))
 // Static files
-
+app.use(express.static(path.join(__dirname, 'public')))
 // Listening server
 
 app.listen(app.get('port'), () => {
